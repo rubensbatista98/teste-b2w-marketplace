@@ -1,0 +1,7 @@
+.container {
+  max-width: 1300px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 410px 1fr;
+  grid-template-areas: "sidebar - main";
+}

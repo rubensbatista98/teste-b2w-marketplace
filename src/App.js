@@ -1,10 +1,14 @@
 import React from "react";
 
-import UserAbout from "./components/UserAbout";
+import Sidebar from "./components/Sidebar";
+
+import "./App.scss";
 
 const App = () => {
   const infos = {
-    image: "https://unsplash.com/photos/hh3ViD0r0Rc",
+    // image: "https://via.placeholder.com/300",
+    image:
+      "https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png",
     name: "Brian Walker",
     profession: "Web Developer",
     description:
@@ -26,7 +30,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <UserAbout userInfo={infos} />
+      <Sidebar userInfo={infos} />
     </div>
   );
 };
