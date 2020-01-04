@@ -1,0 +1,27 @@
+.skills-info {
+  & > .skill {
+    margin-bottom: 20px;
+
+    & > .name {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    & > .percentage-bar {
+      height: 20px;
+      border: 2px solid #ffffff;
+      position: relative;
+
+      & > .percentage {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #ffffff;
+      }
+    }
+  }
+}

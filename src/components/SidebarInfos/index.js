@@ -1,44 +1,18 @@
 import React from "react";
 
+import ProfileInfo from "../ProfileInfo";
+import ContactInfo from "../ContactInfo";
+import SkillsInfo from "../SkillsInfo";
+
 import "./style.scss";
 
 const SidebarInfos = ({ userInfo }) => (
   <section className="sidebar-infos">
-    <h2 className="title">Profile</h2>
+    <ProfileInfo description={userInfo.description} />
 
-    <p className="description">{userInfo?.description}</p>
+    <ContactInfo contact={userInfo.contact} />
 
-    <h2 className="title">Contact</h2>
-
-    <address>
-      <div className="row">
-        <p>{userInfo?.contact?.tel}</p>
-        <p>{userInfo?.contact?.cel}</p>
-      </div>
-
-      <div className="row">
-        <p>{userInfo?.contact?.address}</p>
-      </div>
-
-      <div className="row">
-        <p>{userInfo?.contact?.website}</p>
-        <p>{userInfo?.contact?.mail}</p>
-      </div>
-    </address>
-
-    <h2 className="title">Skills</h2>
-
-    {userInfo?.skills.map((skill, index) => (
-      <div className="skill" key={index} aria-label="skill">
-        <p>{skill.name}</p>
-
-        <span
-          aria-label="Percentage Bar"
-          aria-valuenow={skill.value.split("%")[0]}
-          data-value={skill.value}
-        ></span>
-      </div>
-    ))}
+    <SkillsInfo skills={userInfo.skills} />
   </section>
 );
 

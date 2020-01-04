@@ -6,7 +6,6 @@ import "./App.scss";
 
 const App = () => {
   const infos = {
-    // image: "https://via.placeholder.com/300",
     image:
       "https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png",
     name: "Brian Walker",

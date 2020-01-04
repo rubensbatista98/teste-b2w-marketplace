@@ -1,0 +1,10 @@
+.contact-info {
+  & > address {
+    & > .row {
+      font-style: normal;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+}

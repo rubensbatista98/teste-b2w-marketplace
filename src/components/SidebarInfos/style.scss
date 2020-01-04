@@ -6,7 +6,7 @@ $spacing-very-big: 90px;
 .sidebar-infos {
   padding: $spacing-big $spacing-very-big;
 
-  & > .title {
+  & .title {
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -26,20 +26,11 @@ $spacing-very-big: 90px;
     }
   }
 
-  & > .description {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: $spacing-medium;
+  & > .profile-info {
+    margin-bottom: 30px;
   }
 
-  & > address {
-    margin-bottom: $spacing-big;
-
-    & > .row {
-      font-style: normal;
-      letter-spacing: 2px;
-      line-height: 1.5;
-      margin-bottom: $spacing-small;
-    }
+  & > .contact-info {
+    margin-bottom: 50px;
   }
 }
