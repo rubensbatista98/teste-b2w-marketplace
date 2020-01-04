@@ -1,0 +1,21 @@
+.user-experience {
+  margin-bottom: 50px;
+
+  & > .title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  & > .time {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  & > .description {
+    line-height: 1.5;
+  }
+}
