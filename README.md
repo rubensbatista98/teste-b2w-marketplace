@@ -20,3 +20,9 @@ criado pelo [Felipe Fialho](https://github.com/felipefialho).
 
 Criar uma aplicação que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e
 exiba os dados de um usuário.
+
+## Imagens
+
+![Desktop](layouts/desktop.png "Desktop")
+
+![Mobile](layouts/mobile.png "Mobile")
