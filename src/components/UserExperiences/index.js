@@ -8,8 +8,9 @@ const UserExperiences = ({ title, experiences }) => (
   <section className="user-experiences">
     <h2 className="title">{title}</h2>
 
-    {experiences.map(experience => (
+    {experiences.map((experience, index) => (
       <UserExperience
+        key={index}
         title={experience.name}
         time={experience.date}
         description={experience.description}

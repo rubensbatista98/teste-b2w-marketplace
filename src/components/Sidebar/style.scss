@@ -1,7 +1,29 @@
+@mixin sidebarSpacing($spacing) {
+  & > .sidebar-header {
+    padding: $spacing;
+  }
+
+  & > .sidebar-infos {
+    padding: $spacing;
+  }
+}
+
 .sidebar-page {
+  $spacing: 50px 90px;
+
   min-height: 100%;
   text-align: center;
   background-color: #212728;
   color: #ffffff;
   grid-area: sidebar;
+
+  @include sidebarSpacing($spacing);
+}
+
+@media (max-width: 920px) {
+  .sidebar-page {
+    $spacing: 70px 45px;
+
+    @include sidebarSpacing($spacing);
+  }
 }

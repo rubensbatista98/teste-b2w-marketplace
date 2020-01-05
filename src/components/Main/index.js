@@ -6,8 +6,13 @@ import "./style.scss";
 
 const Main = ({ experience, education }) => (
   <main>
-    <UserExperiences title="Work Experience" experiences={experience} />
-    <UserExperiences title="Education" experiences={education} />
+    {!!experience.length && (
+      <UserExperiences title="Work Experience" experiences={experience} />
+    )}
+
+    {!!education.length && (
+      <UserExperiences title="Education" experiences={education} />
+    )}
   </main>
 );
 

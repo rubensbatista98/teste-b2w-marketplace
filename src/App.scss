@@ -4,4 +4,19 @@
   display: grid;
   grid-template-columns: 410px 1fr;
   grid-template-areas: "sidebar main";
+  margin: 0 auto;
+  border: 1px solid #000000;
+}
+
+@media (max-width: 920px) {
+  .container {
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "sidebar" "main";
+  }
 }

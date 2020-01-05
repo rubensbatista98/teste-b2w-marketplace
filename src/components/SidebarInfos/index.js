@@ -8,11 +8,13 @@ import "./style.scss";
 
 const SidebarInfos = ({ userInfo }) => (
   <section className="sidebar-infos">
-    <ProfileInfo description={userInfo.description} />
+    {!!userInfo.description && (
+      <ProfileInfo description={userInfo.description} />
+    )}
 
-    <ContactInfo contact={userInfo.contact} />
+    {!!userInfo.contact && <ContactInfo contact={userInfo.contact} />}
 
-    <SkillsInfo skills={userInfo.skills} />
+    {!!userInfo.skills && <SkillsInfo skills={userInfo.skills} />}
   </section>
 );
 

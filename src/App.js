@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
@@ -6,14 +6,13 @@ import Main from "./components/Main";
 import "./App.scss";
 
 const App = () => {
-  const infos = {
+  const [user, setUser] = useState({
     image:
       "https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png",
     name: "Brian Walker",
     profession: "Web Developer",
     description:
       "27-year old web developer fromt Colorado Springs with 5+ years of work experience in various fields",
-
     contact: {
       tel: "123-456-7890",
       cel: "012-345-6789",
@@ -66,12 +65,12 @@ const App = () => {
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
       }
     ]
-  };
+  });
 
   return (
     <div className="container">
-      <Sidebar userInfo={infos} />
-      <Main experience={infos.experience} education={infos.education} />
+      <Sidebar userInfo={user} />
+      <Main experience={user.experience} education={user.education} />
     </div>
   );
 };
