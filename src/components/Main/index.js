@@ -6,11 +6,11 @@ import "./style.scss";
 
 const Main = ({ experience, education }) => (
   <main>
-    {!!experience.length && (
+    {!!experience?.length && (
       <UserExperiences title="Work Experience" experiences={experience} />
     )}
 
-    {!!education.length && (
+    {!!education?.length && (
       <UserExperiences title="Education" experiences={education} />
     )}
   </main>

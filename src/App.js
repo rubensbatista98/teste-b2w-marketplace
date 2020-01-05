@@ -1,71 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
 
+import fetchData from "./utils/fetchData";
+
 import "./App.scss";
 
 const App = () => {
-  const [user, setUser] = useState({
-    image:
-      "https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png",
-    name: "Brian Walker",
-    profession: "Web Developer",
-    description:
-      "27-year old web developer fromt Colorado Springs with 5+ years of work experience in various fields",
-    contact: {
-      tel: "123-456-7890",
-      cel: "012-345-6789",
-      address: "1490 General Woods. Colorado Springs",
-      website: "brianwalker.co",
-      mail: "mail@brianwalker.co"
-    },
-    skills: [
-      { name: "Front End", value: "80%" },
-      { name: "Back End", value: "90%" },
-      { name: "Writing", value: "75%" }
-    ],
-    experience: [
-      {
-        name: "Front End Developer @ HillSong",
-        date: "January 2014",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-        name: "PHP Developer @ Creative Wizards",
-        date: "March 2012 - December 2013",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-        name: "UX Designer @ Graphics MasterMinds",
-        date: "January 2012 - February 2012",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      }
-    ],
-    education: [
-      {
-        name: "Web Developer @ Harvard University",
-        date: "August 2006 - May 2010",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-        name: "Colorado Springs College",
-        date: "August 2003 - May 2006",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-        name: "UX Designer @ Graphics MasterMinds",
-        date: "January 2012 - February 2012",
-        description:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      }
-    ]
-  });
+  const [user, setUser] = useState({});
+
+  const API_URL = "http://www.mocky.io/v2/5a5e38f3330000b0261923a5";
+
+  useEffect(() => {
+    getUserInfos();
+
+    async function getUserInfos() {
+      const data = await fetchData(API_URL);
+
+      setUser(data.profile);
+    }
+  }, []);
 
   return (
     <div className="container">
